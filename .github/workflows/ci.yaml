@@ -30,9 +30,6 @@ jobs:
           VALIDATE_YAML_PRETTIER: false
 
   docker-build:
-    needs:
-      - go-lint
-      - go-test
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Code
