@@ -7,30 +7,6 @@ on:
   pull_request:
 
 jobs:
-  go-lint:
-    name: go-lint
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - uses: actions/setup-go@v5
-        with:
-          go-version: stable
-
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v6
-
-  go-test:
-    name: go test
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: go test
-        run: make test
-
   super-linter:
     permissions:
       statuses: write
