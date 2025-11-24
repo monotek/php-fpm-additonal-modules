@@ -3,4 +3,3 @@
 php fpm container with some additonal modules:
 
 * mysqli
-* opcache
